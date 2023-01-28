@@ -45,6 +45,7 @@ local({
     disableProtocols <- paste('"', disableProtocols, '"', sep = '', collapse = ',')
   }
   reconnect <- if (identical("true", tolower(input$reconnect))) "true" else "false"
+  reconnectTimeout <- as.numeric(input$reconnect_timeout) * 1000
   options(shiny.sanitize.errors = identical("true", tolower(input$sanitizeErrors)))
 
   # Top-level bookmarking directory (for all users)
