@@ -202,8 +202,8 @@ local({
       tags$script(src='__assets__/sockjs.min.js'),
       tags$script(src='__assets__/shiny-server-client.min.js'),
       tags$script(
-        sprintf("preShinyInit({reconnect:%s,disableProtocols:[%s]});",
-          reconnect, disableProtocols
+        sprintf("preShinyInit({reconnect:%s,disableProtocols:[%s],reconnectTimeout:%s});",
+          reconnect, disableProtocols, reconnectTimeout
         )
       ),
       tags$link(rel='stylesheet', type='text/css', href='__assets__/shiny-server.css'),
